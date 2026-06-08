@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cart</title>
+</head>
+<body>
+
+    <h1>Shopping Cart</h1>
+
+    <div id="cartItems"></div>
+
+    <script>
+
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        const cartDiv = document.getElementById('cartItems');
+
+        cart.forEach(item => {
+
+            cartDiv.innerHTML += `
+                <p>${item}</p>
+            `;
+
+        });
+
+    </script>
+
+</body>
+</html>
